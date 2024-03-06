@@ -3,12 +3,8 @@ import numpy as np
 import seaborn as sns
 sns.set()
 from matplotlib import pyplot as plt
-import os
-from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-df = pd.read_csv(os.path.join(BASE_DIR,'main/data.csv'))
+df = pd.read_csv('data.csv')
 
 df.columns = df.columns.str.lower().str.replace(' ','_')
 
